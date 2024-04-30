@@ -4,7 +4,8 @@ import { Helmet } from "react-helmet";
 
 
 const PageContainer = ({ title, description, children }) => (
-  <div className="mainApp">
+  <div className="bg-dhermeswhite w-full h-screen">
+  
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
