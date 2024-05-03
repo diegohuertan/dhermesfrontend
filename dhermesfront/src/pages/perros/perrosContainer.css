@@ -1,0 +1,66 @@
+.dogcardimg {
+    width: 150px;
+    height: 150px;
+}
+
+.containerCard {
+    width: 170px;
+    height: 310px;
+    background-color: #D8F2F0;
+    border-radius: 13px;
+}
+
+.imgRounded {
+    border-radius: 20px;
+}
+
+.filtrosPerros{
+    background-color: #88BFBA;
+    color: #D8F2F0;
+    font-family: jsMath-cmr10;
+    font-size: 30px;
+}
+
+.perros {
+    background-color: #BDF2ED;
+}
+
+.buscarNabvar {
+    background-color: #04BFAD;
+    color: #FFFFFF;
+}
+
+.inputSearch {
+    width: 400px;
+}
+
+.contenedroPerfilEsp {
+    width: 1300px;
+    height: 500px;
+}
+
+
+.contenedroPerfilBg {
+    background-color: #D8F2F0;
+}
+
+.contenedroPerfil img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedorimgperfil {
+    width: 800px;
+    height: 500px;
+}
+
+.perfilnombretext {
+    font-size: 50px;
+    font-family: jsMath-cmr10;
+    color: #2E4960;
+}
+
+.perfiltext {
+    color: #000000;
+    font-size: 20px;
+}

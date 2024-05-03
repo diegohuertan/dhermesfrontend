@@ -5,6 +5,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        'custom': '200px', // Puedes ajustar el valor según tus necesidades
+      },
+      height: {
+        'custom': '200px', // Puedes ajustar el valor según tus necesidades
+      },
       colors: {
         'white': '#ffffff',
         'purple': '#3f3cbb',
