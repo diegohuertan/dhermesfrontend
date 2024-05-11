@@ -12,7 +12,7 @@ const FullLayout = Loadable(
 const Error = Loadable(lazy(() => import("../pages/error/404")));
 const HomePage = Loadable(lazy(() => import("../pages/home/home")));
 const PerrosView = Loadable(lazy(() => import("../pages/perros/perrosContainer")));
-
+const LoginInt = Loadable(lazy(() => import("../pages/login/Loginint")));
 
 
 /* ****Routes***** */
@@ -26,7 +26,7 @@ const Router = [
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
       { path: "Perros", element: <PerrosView /> },
-      
+      { path: "Login", element: <LoginInt />}
   
       
     ],
