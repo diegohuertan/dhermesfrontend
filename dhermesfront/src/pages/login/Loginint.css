@@ -1,3 +1,18 @@
 .LoginBg {
     background-color: #BDF2ED;
+    height: auto;
+}
+
+.conatinerLog {
+    height: auto;
+    width: auto;
+}
+
+.imagen-responsiva {
+    width: 100%;
+    height: auto;
+  }
+
+.bg-Move {
+    transform: translateX(5px);
 }
