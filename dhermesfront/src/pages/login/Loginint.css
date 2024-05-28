@@ -1,6 +1,12 @@
+
+
 .LoginBg {
     background-color: #BDF2ED;
     height: auto;
+}
+
+.loginbuttonbg {
+    background-color:  #04BFAD;
 }
 
 .conatinerLog {
@@ -13,6 +19,16 @@
     height: auto;
   }
 
-.bg-Move {
-    transform: translateX(5px);
+
+.perrologin {
+    height: 91%;
+    transform: scale(1.3) translate(10%, 20%);
 }
+
+
+@media screen and (max-width: 600px) {
+    .perrologin {
+      display: none;
+    }
+  }
+
