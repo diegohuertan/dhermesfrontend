@@ -3,13 +3,10 @@ import AdoptionCard from "./AdoptionCard";
 import './perrosContainer.css';
 import HeaderPerros from "./HeaderPerros";
 import BuscadorPerros from "./BuscadorPerros";
-import RefugioNavBar from "./refugioNavBar.jsx";
-import Perfilperrocontainer from "./PerfilPerroPublico/Perfilperrocontainer.jsx";
 
 function PerrosContainer() {
   return (
     <>
-      <RefugioNavBar></RefugioNavBar>
       <HeaderPerros />
       <div className="perros p-4">
         <BuscadorPerros />
@@ -61,7 +58,6 @@ function PerrosContainer() {
           />
         </div>
       </div> 
-      <Perfilperrocontainer></Perfilperrocontainer>
     </>
   );
 }

@@ -1,6 +1,7 @@
 import Backdrop from './full-layout/backdrop';
 import CircularProgress from './full-layout/circularprogress';
 import React, { Suspense } from 'react';
+
 // ===========================|| LOADABLE - LAZY LOADING ||=========================== //
 const Loadable = (Component) => (props) =>
   (
@@ -15,6 +16,7 @@ const Loadable = (Component) => (props) =>
       }
     >
       <Component {...props} />
+      
     </Suspense>
   );
 export default Loadable;

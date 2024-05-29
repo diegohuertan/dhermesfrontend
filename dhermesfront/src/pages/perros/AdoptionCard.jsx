@@ -1,7 +1,8 @@
 import React from 'react';
 import './perrosContainer.css';
+import { Link } from 'react-router-dom';
 
-const AdoptionCard = ({ gender, imageSrc, name }) => {
+const AdoptionCard = ({ gender, imageSrc, name, id }) => {
   return (
     <>
     <div className="max-w-sm overflow-hidden shadow-lg containerCard">
@@ -22,12 +23,14 @@ const AdoptionCard = ({ gender, imageSrc, name }) => {
 
       </div>
       <div className="flex justify-center">
-        <button className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-8 rounded-full">
-          <div className="flex items-center">
-            <i className="fas fa-heart text-white mr-2"></i>
-            <p className="text-white">Adoptar</p>
-          </div>
-        </button>
+        <Link to={`/perros/prueba`}>
+          <button className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-8 rounded-full">
+            <div className="flex items-center">
+              <i className="fas fa-heart text-white mr-2"></i>
+              <p className="text-white">Adoptar</p>
+            </div>
+          </button>
+        </Link>
       </div>
     </div>
     </>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Backdrop from  "./backdrop";
 import CircularProgress from "./circularprogress";
+import Navbar from '../../components/NavBar/refugioNavBar.jsx';
 
 function MainLayout() {
   const [loading, isLoading] = useState(true);
@@ -15,7 +16,7 @@ function MainLayout() {
     <>
       {!loading ? (
         <>
-        
+          <Navbar></Navbar>
           <Outlet />
     
         </>
