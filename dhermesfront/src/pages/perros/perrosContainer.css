@@ -31,7 +31,7 @@
 }
 
 .inputSearch {
-    width: 400px;
+    width: 100%;
 }
 
 .contenedroPerfilEsp {
@@ -64,3 +64,29 @@
     color: #000000;
     font-size: 20px;
 }
+
+.largoinput {
+    max-width: 400px;
+}
+
+/* Estilos base para todos los tamaños de pantalla */
+.filtrosPerros {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilos específicos para pantallas pequeñas */
+  @media (max-width: 600px) { /* Ajusta el valor según tu necesidad */
+    .filtrosPerros {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .pequehidde {
+        display: none;
+    }
+  
+    .filtrosPerros > div:first-child { /* Estilo para el primer div (icono y texto) */
+      margin-bottom: 0.3rem; /* Añade espacio inferior en pantallas pequeñas */
+    }
+  }
+  

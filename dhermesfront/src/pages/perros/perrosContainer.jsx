@@ -9,8 +9,8 @@ function PerrosContainer() {
     <>
       <HeaderPerros />
       <div className="perros p-4">
-        <BuscadorPerros />
-        <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-4">
+        <BuscadorPerros/>
+        <div className="pt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-6">
           <AdoptionCard
             gender="Macho"
             name="Cooper"
