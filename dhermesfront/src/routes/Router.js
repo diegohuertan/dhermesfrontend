@@ -26,8 +26,8 @@ const Router = [
       { path: "/", exact: true, element: <HomePage /> },
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
-      { path: "Perros", element: <PerrosView /> },
-      { path: "perros/prueba", element: <PerrosViewPerfil />},
+      { path: "Rescatados", element: <PerrosView /> },
+      { path: "Rescatados/prueba", element: <PerrosViewPerfil />},
       { path: "Login", element: <LoginInt />}
   
       

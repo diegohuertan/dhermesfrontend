@@ -23,7 +23,7 @@ const AdoptionCard = ({ gender, imageSrc, name, id }) => {
 
       </div>
       <div className="flex justify-center">
-        <Link to={`/perros/prueba`}>
+        <Link to={`/Rescatados/prueba`}>
           <button className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-8 rounded-full">
             <div className="flex items-center">
               <i className="fas fa-heart text-white mr-2"></i>

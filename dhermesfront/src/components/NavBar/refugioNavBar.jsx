@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const RefugioNavBar = () => {
 
     const pages = ['Inicio', 'Rescatados', 'Nosotros','Donaciones'];
+    const links = ['Inicio', 'Rescatados', 'Nosotros','Donaciones'];
 
     const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -41,10 +42,9 @@ const RefugioNavBar = () => {
             <div className='flex items-center justify-center'>
                 <img width={60} height={60} src={process.env.PUBLIC_URL + '/iconoTemp.svg'} alt="Mi Icono" />
                 <ul className="flex navbarTextColor navbarTextSize justify-start "> {/* Cambio aquí */}
-                    <li><a href="#inicio" className="font-bold text-lg px-4">Inicio</a></li>
-                    <li><a href="#oerris" className="font-bold text-lg px-4">Acerca de</a></li>
-                    <li><a href="#b" className="font-bold text-lg px-4">Servicios</a></li>
-                    <li><a href="#c" className="font-bold text-lg px-4">Contacto</a></li>
+                    {pages.map((page,index) => (
+                        <li key={page} className="font-bold text-lg px-2"><a href={links[index]} className="font-bold text-lg px-4">{page}</a></li>
+                    ))}
                 </ul>
             </div>
         </div>
