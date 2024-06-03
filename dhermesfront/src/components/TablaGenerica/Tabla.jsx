@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import './Inventario.css';
 
-function Tabla({ encabezados, datos, acciones, agregar }) {
+function Tabla({filaspagina, encabezados, datos, acciones, agregar }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchColumn, setSearchColumn] = useState(encabezados[0]);
-  const itemsPerPage = 4;
+  const itemsPerPage = filaspagina;
 
   const columnIndices = encabezados.reduce((acc, encabezado, index) => {
     acc[encabezado] = index;

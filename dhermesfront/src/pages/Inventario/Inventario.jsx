@@ -33,6 +33,7 @@ function Inventario() {
   return (
     <>
     <Tabla
+        filaspagina={6}
         encabezados={encabezados}
         datos={datos}
         acciones={[
@@ -52,7 +53,6 @@ function Inventario() {
             onClick: handleNuevoMedicamentoClick
             }]}
         />
-
     </>
   );
 }
