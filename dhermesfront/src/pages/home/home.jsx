@@ -44,8 +44,8 @@ const volunteers = [
             <img className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover" src={process.env.PUBLIC_URL + "PerroNosotros.jpeg"} alt="Imagen" />
 
             <div>
-              <h1 className="text-3xl md:text-5xl mb-6">¿Quiénes somos?</h1>
-              <p className="text-base md:text-xl">Mauris commodo lacinia nisl, ut sodales ex vestibulum sed. Sed condimentum, nibh vitae dignissim laoreet, ex nisl imperdiet ex, at varius magna velit quis purus. Suspendisse at magna congue, rhoncus ligula tincidunt, efficitur purus. Vestibulum in vulputate odio.</p>
+              <h1 className="text-3xl md:text-5xl mb-6 text-center md:text-left">¿Quiénes somos?</h1>
+              <p className="text-base md:text-xl px-16 sm:px-4">Mauris commodo lacinia nisl, ut sodales ex vestibulum sed. Sed condimentum, nibh vitae dignissim laoreet, ex nisl imperdiet ex, at varius magna velit quis purus. Suspendisse at magna congue, rhoncus ligula tincidunt, efficitur purus. Vestibulum in vulputate odio.</p>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ const volunteers = [
 
       <div className="relative bg-teal-100 py-12 md:py-24">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-5xl mb-8 text-center">Nuestros voluntarios</h1>
+          <h1 className="text-3xl md:text-5xl mb-4 text-center">Nuestros voluntarios</h1>
           <p className="opacidad1 text-sm md:text-lg mb-12 text-center">Trabajando por un mundo mejor</p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
