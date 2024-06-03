@@ -1,0 +1,16 @@
+.bg_header {
+    background-color: #88BFBA;
+}
+
+.redondeo {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.bg_buscador {
+    background-color: #D8F2F0;
+}
+
+.bg_nuevomed {
+    background-color: #04BFAD;
+}
