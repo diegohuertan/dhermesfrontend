@@ -1,4 +1,5 @@
 import React from "react";
+import "./home.css";
 import PageContainer from "../../components/container/PageContainer";
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
   return (
     <>
       <PageContainer>
-    <div className="grid grid-cols-2 bg-dhermesblue" style={{
+    <div id="presentacion" className="grid grid-cols-2 bg-dhermesblue" style={{
  backgroundImage: "url('./pattern1.svg')",
  backgroundRepeat: 'repeat',
  backgroundPosition: "center",
@@ -33,7 +34,7 @@ function Home() {
 
   <div className="w-full p-4">
     <h1 className="text-letterwhite text-6xl mt-40">Bienvenidos Al Refugio</h1>
-    <h1 className="text-letterblue text-6xl">Dhermes</h1>
+    <h1 className="text-letterblue text-6xl">D'Hermes</h1>
     <p className="text-grey-200 max-w-xl text-4xl">Donde cada perro encuentra un hogar amoroso. Nos dedicamos a rescatar y realojar a perros necesitados.</p>
   </div>
 </div>
@@ -48,7 +49,7 @@ function Home() {
     height: "100%",
     transform: "rotate(180deg)"
   }}></div>
- <div className="flex justify-between items-center">
+ <div  id="nosotros" className="flex justify-between items-center">
   <img className="ml-40" src="https://storage.googleapis.com/petfamily/imagenes/fundacion_dhermes/aurora.jpg" alt="Imagen redonda" style={{borderRadius: "50%", width: "25%", aspectRatio: "1/1", objectFit: "cover" }} />
   <div className="text-left m-20" style={{width: "50%"}}>
     <h1 className="text-grey-300 text-3xl">¿Quiénes somos?</h1>
@@ -71,7 +72,7 @@ function Home() {
     
     transform: "rotate(360deg)"
   }}></div>
-          <div className="text-center">
+          <div id="voluntarios" className="text-center">
   <h1 className="text-grey-300 text-3xl">Nuestros Voluntarios</h1>
   <p className="text-grey-100 text-xs">Trabajando por un mundo mejor</p>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
@@ -95,7 +96,14 @@ function Home() {
     
     transform: "rotate(180deg)"
   }}></div>
-          <div className="flex flex-col items-center">
+          <div id="donaciones" className="flex flex-col items-center">
+           <div className="col-span-1 row-start-1 row-end-3 hidden xl:block">  {/* Oculta en pantallas pequeñas */}
+            <img 
+              className="imgPerro2 absolute bottom-[174px] right-left" 
+              src={process.env.PUBLIC_URL + "PerroDonaciones.png"} 
+            />
+          </div>
+          
             <h1 className="text-grey-300 text-5xl p-6 mb">¿Quieres hacer una donacion?</h1>
             <button className="bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce mb-4">
               ¡Dona aquí!
