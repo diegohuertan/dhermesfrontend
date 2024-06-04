@@ -1,0 +1,35 @@
+.background1 {
+    background-color: #BDF2ED;
+}
+
+.imgPerro1 {
+    object-position: 0% -20%;
+    object-fit: cover;
+}
+
+.imgPerro2 {
+    object-position: 0px 10px;
+    object-fit: cover;
+}
+
+.seccion {
+    width: auto;
+    height: 450px;
+}
+
+.color1 {
+    color: #04BFAD;
+}
+
+.color2 {
+    color: #FFFFFF;
+}
+
+.color3 {
+    color: #000000;
+}
+
+.opacidad1 {
+    opacity: 0.5;
+
+}
