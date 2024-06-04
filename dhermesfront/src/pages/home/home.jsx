@@ -23,7 +23,7 @@ const volunteers = [
     <>
     <PageContainer>
       <div>
-        <div className="h-[600px] relative bg-teal-100 grid grid-cols-3 overflow-hidden">
+        <div id="presentacion" className="h-[600px] relative bg-teal-100 grid grid-cols-3 overflow-hidden">
           <div className="col-span-1 hidden md:block bg-cover bg-center " style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "perrologin.png"})` }}>
           </div>
           <div className="col-span-2 flex mt-40 ml-20 ">
@@ -38,11 +38,10 @@ const volunteers = [
         </div>
 
 
-      <div className="h-[500px] relative bg-green-100 py-12 md:py-24">
+      <div id="nosotros" className="h-[500px] relative bg-green-100 py-12 md:py-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             <img className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover" src={process.env.PUBLIC_URL + "PerroNosotros.jpeg"} alt="Imagen" />
-
             <div>
               <h1 className="text-3xl md:text-5xl mb-6 text-center md:text-left">¿Quiénes somos?</h1>
               <p className="text-base md:text-xl px-16 sm:px-4">Mauris commodo lacinia nisl, ut sodales ex vestibulum sed. Sed condimentum, nibh vitae dignissim laoreet, ex nisl imperdiet ex, at varius magna velit quis purus. Suspendisse at magna congue, rhoncus ligula tincidunt, efficitur purus. Vestibulum in vulputate odio.</p>
@@ -52,7 +51,7 @@ const volunteers = [
       </div>
 
 
-      <div className="relative bg-teal-100 py-12 md:py-24">
+      <div id="voluntarios" className="relative bg-teal-100 py-12 md:py-24">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-5xl mb-4 text-center">Nuestros voluntarios</h1>
           <p className="opacidad1 text-sm md:text-lg mb-12 text-center">Trabajando por un mundo mejor</p>
@@ -69,7 +68,7 @@ const volunteers = [
       </div>
 
 
-        <div className="h-[700px] relative bg-green-100 grid grid-cols-4 grid-rows-3 overflow-hidden">
+        <div id="donaciones" className="h-[700px] relative bg-green-100 grid grid-cols-4 grid-rows-3 overflow-hidden">
           <div className="col-span-1 row-start-1 row-end-3 hidden xl:block">  {/* Oculta en pantallas pequeñas */}
             <img 
               className="imgPerro2 absolute bottom-[174px] right-left" 
