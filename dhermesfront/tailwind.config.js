@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       width: {
         'custom': '200px', // Puedes ajustar el valor según tus necesidades
+      },fontFamily: {
+        'sans': ['Roboto', 'sans-serif'],
       },
       height: {
         'custom': '200px', // Puedes ajustar el valor según tus necesidades
@@ -24,6 +26,7 @@ module.exports = {
         'letterblue' : '#04BFAD',
         'letterwhite' : '#FFFFFF',
         'dhermeswhite' : '#D8F2F0',
+        'dhermeshblue' : '#8FFFF6',
 
       },
     },

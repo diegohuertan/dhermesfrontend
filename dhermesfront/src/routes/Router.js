@@ -14,7 +14,7 @@ const HomePage = Loadable(lazy(() => import("../pages/home/home")));
 const PerrosView = Loadable(lazy(() => import("../pages/perros/perrosContainer")));
 const LoginInt = Loadable(lazy(() => import("../pages/login/Loginint")));
 const Inventario = Loadable(lazy(() => import("../pages/Inventario/Inventario")));
-const Tratamientos = Loadable(lazy(() => import("../pages/tratamientos/Tratamientos")));
+const Tratamientos = Loadable(lazy(() => import("../pages/tratamientos/tratamientos")));
 const PerrosViewPerfil = Loadable(lazy(() => import("../pages/perros/PerfilPerroPublico/Perfilperrocontainer")));
 
 
@@ -25,7 +25,7 @@ const Router = [
     path: "/",
     element: <FullLayout />,
     children: [
-      { path: "/", exact: true, element: <HomePage /> },
+      { path: "/inicio", exact: true, element: <HomePage /> },
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
       { path: "Rescatados", element: <PerrosView /> },
