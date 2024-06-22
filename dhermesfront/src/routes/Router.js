@@ -29,7 +29,7 @@ const Router = [
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
       { path: "Rescatados", element: <PerrosView /> },
-      { path: "Rescatados/prueba", element: <PerrosViewPerfil />},
+      { path: "Rescatados/perfil/:id", element: <PerrosViewPerfil />},
       { path: "Login", element: <LoginInt />},
       { path: "Inventario", element: <Inventario />},
       { path: "Tratamientos", element: <Tratamientos />}

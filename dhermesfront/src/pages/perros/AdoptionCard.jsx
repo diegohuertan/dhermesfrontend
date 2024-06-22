@@ -6,7 +6,10 @@ const AdoptionCard = ({ gender, imageSrc, name, id }) => {
   return (
     <>
     <div className="max-w-sm overflow-hidden shadow-lg containerCard">
-      <img className="w-full" src={imageSrc} alt={`Imagen de ${name}`} />
+      <img className="w-full" src={imageSrc} alt={`Imagen de ${name}`} style={{
+        height: "170px",
+        objectFit: "cover"
+      }} />
       <div className="px-4 py-4">
         <div className="font-bold text-xl mb-2">{name}</div>
         <div className='flex items-center'>
@@ -23,7 +26,7 @@ const AdoptionCard = ({ gender, imageSrc, name, id }) => {
 
       </div>
       <div className="flex justify-center">
-        <Link to={`/Rescatados/prueba`}>
+        <Link to={`/Rescatados/perfil/`+id}>
           <button className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-8 rounded-full">
             <div className="flex items-center">
               <i className="fas fa-heart text-white mr-2"></i>
