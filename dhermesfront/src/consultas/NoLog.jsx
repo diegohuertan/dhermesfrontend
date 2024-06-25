@@ -66,3 +66,23 @@ export async function login(correo, password) {
         return {};
     }
 }
+
+export async function getMedicamentos() {
+    try {
+        const response = await axios.get(`${API_URL}medicamentos`);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
+
+export async function getTratamientos() {
+    try {
+        const response = await axios.get(`${API_URL}tratamientos`);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}

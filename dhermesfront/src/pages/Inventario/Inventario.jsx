@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Tabla from '../../components/TablaGenerica/Tabla';
+import { getMedicamentos } from "../../consultas/NoLog";
 
 const encabezados = ['ID','Nombre', 'Cantidad', 'Tipo', 'Ingreso', 'Vencimiento', 'Estado', 'Acciones'];
 const datos = [
@@ -17,42 +18,62 @@ const datos = [
 ];
 
 function Inventario() {
+  const [medicamentos, setMedicamentos] = useState(datos); // Initialize with datos for testing
+
+  useEffect(() => {
+    const cargarMedicamentos = async () => {
+      const data = await getMedicamentos();
+      const format = data.map((medicamento) => [
+        medicamento.id || '',
+        medicamento.nombre || '',
+        medicamento.cantidad || 0,
+        medicamento.tipo || '',
+        medicamento.fechaIngreso || '',
+        medicamento.fechaVencimiento || '',
+        medicamento.estado || ''
+      ]);
+      console.log(format);
+      setMedicamentos(format);
+    };
+
+    cargarMedicamentos();
+  }, []); // The empty array ensures this runs only once when the component mounts
 
   const handleEliminarClick = (rowIndex) => {
-    console.log(datos[rowIndex][0]);
+    console.log(medicamentos[rowIndex][0]);
   };
-  
+
   const handleEditarClick = (rowIndex) => {
     console.log('Editar');
   };
 
-  const handleNuevoMedicamentoClick = (rowIndex) => {
+  const handleNuevoMedicamentoClick = () => {
     console.log('Nuevo medicamento');
-  }
+  };
 
   return (
     <>
-    <Tabla
+      <Tabla
         filaspagina={6}
         encabezados={encabezados}
-        datos={datos}
+        datos={medicamentos}
         acciones={[
-            {
+          {
             texto: 'Eliminar',
             icono: 'eliminar.svg',
             onClick: handleEliminarClick
-            },
-            {
+          },
+          {
             texto: 'Editar',
             icono: 'editar.svg',
             onClick: handleEditarClick
-            }
+          }
         ]}
         agregar={[{
-            texto: 'Agregar Medicamento',
-            onClick: handleNuevoMedicamentoClick
-            }]}
-        />
+          texto: 'Agregar Medicamento',
+          onClick: handleNuevoMedicamentoClick
+        }]}
+      />
     </>
   );
 }
