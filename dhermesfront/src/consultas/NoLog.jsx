@@ -1,44 +1,5 @@
 import axios from 'axios';
 
-
-const dataExample = [{
-    "Datos": {
-      "esterilizacion": {
-        "fecha": "20/02/2023",
-        "lugar": "clinica 1"
-      },
-      "Adopcion": {
-        "Persona": {
-          "nombre": "",
-          "rut": "",
-          "direccion": "",
-          "telefono": "",
-          "correo": "",
-          "retorno": ""
-        },
-        "fecha": ""
-      },
-      "fechaIngreso": "5 años",
-      "fechaNacimiento": "10 años"
-    },
-    "Vacunas": {
-      "vacuna1": "si",
-      "vacuna2": "si",
-      "Antirabica": "si",
-      "vacunaAnual": "si",
-      "antiparasitarioInterno": "si",
-      "antiparasitarioExterno": "si"
-    },
-    "_id": "65b18c06203680dc64febb51",
-    "nombre": "inu",
-    "imagen": "https://static.fundacion-affinity.org/cdn/farfuture/PVbbIC-0M9y4fPbbCsdvAD8bcjjtbFc0NSP3lRwlWcE/mtime:1643275542/sites/default/files/los-10-sonidos-principales-del-perro.jpg",
-    "Tratamientos": [
-      "659ee41f20f00c8d58ce98b9",
-      "65a565ac9c90ba20a3ffad6e"
-    ],
-    "__v": 0
-  }]
-
 const API_URL = 'http://localhost:3000/api/';
 
 function convertDataUtil(data) {
@@ -81,6 +42,25 @@ export async function getPerro(idperro) {
             }
         );
         return convertDataUtil(response.data);
+    } catch (error) {
+        console.error(error);
+        return {};
+    }
+}
+
+export async function login(correo, password) {
+    try {
+      console.log(correo, password);
+        const response = await axios.post(API_URL + 'validarsesion',
+            {
+              correo: correo,
+              contraseña: password
+            }
+        );
+        if (response.success) {
+            localStorage.setItem('token', response.token);
+        }
+        return response.success;
     } catch (error) {
         console.error(error);
         return {};

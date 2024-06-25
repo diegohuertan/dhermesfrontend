@@ -83,7 +83,7 @@ function Tabla({filaspagina, encabezados, datos, acciones, agregar }) {
                 {fila.map((celda, cellIndex) => (
                   <td
                     key={cellIndex}
-                    className="px-6 py-4 whitespace-nowrap text-lg font-bold text-center"
+                    className="px-6 py-4 whitespace-nowrap text-lg  text-center"
                   >
                     {celda === 'Valido' || celda === 'Vencido' || celda === 'Proximo' ? (
                         <span
