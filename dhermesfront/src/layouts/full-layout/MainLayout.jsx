@@ -3,9 +3,13 @@ import { Outlet } from "react-router-dom";
 import Backdrop from  "./backdrop";
 import CircularProgress from "./circularprogress";
 import Navbar from '../../components/NavBar/refugioNavBar.jsx';
+import { useAuth } from "../../Context.js";
+import RefugioNavBarInterno from './../../components/NavBarInterno/refugioNavBar';
 
 function MainLayout() {
   const [loading, isLoading] = useState(true);
+  const { isAuthenticated } = useAuth();
+
   useEffect(() => {
     setTimeout(() => {
       isLoading(false);
@@ -16,7 +20,7 @@ function MainLayout() {
     <>
       {!loading ? (
         <>
-          <Navbar></Navbar>
+          { isAuthenticated ? ( <RefugioNavBarInterno></RefugioNavBarInterno>) : ( <Navbar></Navbar> ) }
           <Outlet />
     
         </>

@@ -1,6 +1,7 @@
 import React, { lazy } from "react";
 import Loadable from "../layouts/loadable";
 import { Navigate } from "react-router-dom";
+import ProtectedRoute from "../Protect";
 
 /* ***Layouts**** */
 const FullLayout = Loadable(
@@ -25,14 +26,15 @@ const Router = [
     path: "/",
     element: <FullLayout />,
     children: [
+      { path: "/", exact: true, element: <Navigate to="/inicio" /> }, // Redirección desde raíz a /inicio
       { path: "/inicio", exact: true, element: <HomePage /> },
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
       { path: "Rescatados", element: <PerrosView /> },
       { path: "Rescatados/perfil/:id", element: <PerrosViewPerfil />},
       { path: "Login", element: <LoginInt />},
-      { path: "Inventario", element: <Inventario />},
-      { path: "Tratamientos", element: <Tratamientos />}
+      { path: "Inventario", element: <ProtectedRoute element={ <Inventario /> }/>},
+      { path: "Tratamientos", element: <ProtectedRoute element={ <Tratamientos /> }/>}
     ],
   },
 ];

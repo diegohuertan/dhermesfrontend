@@ -2,24 +2,29 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Loginint.css';
 import { login } from '../../consultas/NoLog';
+import { useAuth } from "../../Context";
 
 function Loginint() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const [error, setError] = useState('');
+  const { loginState } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
+
       const response = await login(username, password);
-      if (response.success) {
+
+      if (response) {
         // Redirige al inicio después de un login exitoso
+        console.log("Login exitoso");
+        loginState();
         navigate('/inicio');
+      } else {
+        setError('Usuario o contraseña incorrectos');
       }
-    } catch (error) {
-      setError('Login failed. Please check your username and password.');
-    }
+
   };
 
   return (

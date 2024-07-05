@@ -60,7 +60,7 @@ export async function login(correo, password) {
         if (response.success) {
             localStorage.setItem('token', response.token);
         }
-        return response.success;
+        return response.data.success;
     } catch (error) {
         console.error(error);
         return {};
